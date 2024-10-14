@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Insights and Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .insights-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #002147;
+        }
+
+        .insights-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Left column (two horizontal cards) */
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 60%;
+            /* First two containers take 60% width */
+            gap: 20px;
+        }
+
+        /* Style for horizontal cards with image first, then content */
+        .horizontal-card {
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            height: 50%;
+        }
+
+        .horizontal-card img {
+            width: 40%;
+            /* Image takes 40% of the card's width */
+            height: auto;
+        }
+
+        .horizontal-card .insight-content {
+            padding: 20px;
+            flex: 1;
+            /* Content takes up the remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .horizontal-card .date {
+            color: #0080ff;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .horizontal-card h2 {
+            font-size: 1.4em;
+            color: #002147;
+            margin-bottom: 10px;
+        }
+
+        .horizontal-card p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .horizontal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Right side card (vertical, content below image) */
+        .card-right {
+            flex: 1;
+            /* The right-side container takes 40% width */
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card-right img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-right .insight-content {
+            padding: 20px;
+        }
+
+        .card-right .date {
+            color: #0080ff;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-right h2 {
+            font-size: 1.4em;
+            color: #002147;
+            margin-bottom: 10px;
+        }
+
+        .card-right p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .card-right:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 1024px) {
+            .insights-container {
+                flex-direction: column;
+            }
+
+            .left-column,
+            .card-right {
+                flex: 1 1 100%;
+                /* On smaller screens, both take full width */
+            }
+
+            .horizontal-card {
+                flex-direction: column;
+            }
+
+            .horizontal-card img {
+                width: 100%;
+                /* Image takes full width on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="insights-section">
+        <h1>Featured insights and reports</h1>
+        <div class="insights-container">
+            <div class="left-column">
+                <div class="insight-card horizontal-card">
+                    <img src="./WhatsApp Image 2024-10-14 at 11.43.57_aa1ea537.jpg" alt="CrowdStrike Update Outage">
+                    <div class="insight-content">
+                        <span class="date">19/07/2024</span>
+                        <h2>CrowdStrike Software Update Outage</h2>
+                        <p>A CrowdStrike software update caused outages for Microsoft Windows users worldwide. Reach out
+                            to your usual Marsh...</p>
+                    </div>
+                </div>
+
+                <div class="insight-card horizontal-card">
+                    <img src="./WhatsApp Image 2024-10-14 at 11.43.57_aa1ea537.jpg" alt="Logistics Industry">
+                    <div class="insight-content">
+                        <span class="date">28/04/2024</span>
+                        <h2>Unlocking Possibility in the Logistics Industry</h2>
+                        <p>Being one of the most competitive and rapidly evolving industries, it is crucial for
+                            businesses in the logistics sector to take...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-card card-right">
+                <img src="./WhatsApp Image 2024-10-14 at 11.43.57_aa1ea537.jpg" alt="Benefits 2023">
+                <div class="insight-content">
+                    <span class="date">11/04/2024</span>
+                    <h2>Future of Benefits Report</h2>
+                    <p>Mercer Marsh Benefits conducted this extensive survey to gather insights on the various elements
+                        of an organization’s...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
